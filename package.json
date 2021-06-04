@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/hunter170701/testNodeJS#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": ["prettier --single-quote --trailing-comma all --write","git add"]
   },
   "dependencies": {
     "express": "^4.17.1",
