@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 const router = require('./routes');
+const db = require('./config/db');
 
 // TODO: HTTP Logger
 app.use(morgan('combined'));
@@ -25,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // TODO: route init
 router.route(app);
+
+// TODO: Connect to mongoDB
+db.connect();
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
